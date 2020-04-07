@@ -1,0 +1,1393 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20193.19.0821.2225                               -->
+<workbook original-version='18.1' source-build='2019.3.0 (20193.19.0821.2225)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='deliveries+' inline='true' name='federated.0izj4vp1h3sp5b1co4m351y8pmc7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='deliveries' name='textscan.0a7y5z90sth0ix13nztj30cyx58f'>
+            <connection class='textscan' directory='C:/Users/Suvrajeet/Desktop/tableau-dataset' filename='deliveries.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[deliveries.csv].[match_id]' />
+              <expression op='[matches.csv].[id]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0a7y5z90sth0ix13nztj30cyx58f' name='deliveries.csv' table='[deliveries#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='integer' name='match_id' ordinal='0' />
+              <column datatype='integer' name='inning' ordinal='1' />
+              <column datatype='string' name='batting_team' ordinal='2' />
+              <column datatype='string' name='bowling_team' ordinal='3' />
+              <column datatype='integer' name='over' ordinal='4' />
+              <column datatype='integer' name='ball' ordinal='5' />
+              <column datatype='string' name='batsman' ordinal='6' />
+              <column datatype='string' name='non_striker' ordinal='7' />
+              <column datatype='string' name='bowler' ordinal='8' />
+              <column datatype='integer' name='is_super_over' ordinal='9' />
+              <column datatype='integer' name='wide_runs' ordinal='10' />
+              <column datatype='integer' name='bye_runs' ordinal='11' />
+              <column datatype='integer' name='legbye_runs' ordinal='12' />
+              <column datatype='integer' name='noball_runs' ordinal='13' />
+              <column datatype='integer' name='penalty_runs' ordinal='14' />
+              <column datatype='integer' name='batsman_runs' ordinal='15' />
+              <column datatype='integer' name='extra_runs' ordinal='16' />
+              <column datatype='integer' name='total_runs' ordinal='17' />
+              <column datatype='string' name='player_dismissed' ordinal='18' />
+              <column datatype='string' name='dismissal_kind' ordinal='19' />
+              <column datatype='string' name='fielder' ordinal='20' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0a7y5z90sth0ix13nztj30cyx58f' name='matches.csv' table='[matches#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='integer' name='id' ordinal='0' />
+              <column datatype='integer' name='season' ordinal='1' />
+              <column datatype='string' name='city' ordinal='2' />
+              <column datatype='date' name='date' ordinal='3' />
+              <column datatype='string' name='team1' ordinal='4' />
+              <column datatype='string' name='team2' ordinal='5' />
+              <column datatype='string' name='toss_winner' ordinal='6' />
+              <column datatype='string' name='toss_decision' ordinal='7' />
+              <column datatype='string' name='result' ordinal='8' />
+              <column datatype='integer' name='dl_applied' ordinal='9' />
+              <column datatype='string' name='winner' ordinal='10' />
+              <column datatype='integer' name='win_by_runs' ordinal='11' />
+              <column datatype='integer' name='win_by_wickets' ordinal='12' />
+              <column datatype='string' name='player_of_match' ordinal='13' />
+              <column datatype='string' name='venue' ordinal='14' />
+              <column datatype='string' name='umpire1' ordinal='15' />
+              <column datatype='string' name='umpire2' ordinal='16' />
+              <column datatype='string' name='umpire3' ordinal='17' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>match_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[match_id]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>match_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>inning</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[inning]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>inning</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>batting_team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[batting_team]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>batting_team</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bowling_team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bowling_team]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>bowling_team</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>over</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[over]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>over</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ball</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ball]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>ball</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>batsman</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[batsman]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>batsman</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>non_striker</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[non_striker]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>non_striker</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bowler</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bowler]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>bowler</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_super_over</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_super_over]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>is_super_over</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wide_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[wide_runs]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>wide_runs</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bye_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bye_runs]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>bye_runs</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>legbye_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[legbye_runs]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>legbye_runs</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>noball_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[noball_runs]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>noball_runs</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>penalty_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[penalty_runs]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>penalty_runs</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>batsman_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[batsman_runs]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>batsman_runs</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>extra_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[extra_runs]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>extra_runs</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_runs]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>total_runs</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_dismissed</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_dismissed]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>player_dismissed</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dismissal_kind</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dismissal_kind]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>dismissal_kind</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fielder</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fielder]</local-name>
+            <parent-name>[deliveries.csv]</parent-name>
+            <remote-alias>fielder</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>season</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[season]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>season</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team1]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>team1</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team2]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>team2</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>toss_winner</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[toss_winner]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>toss_winner</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>toss_decision</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[toss_decision]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>toss_decision</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>result</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[result]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>result</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dl_applied</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dl_applied]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>dl_applied</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>winner</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[winner]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>winner</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>win_by_runs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[win_by_runs]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>win_by_runs</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>win_by_wickets</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[win_by_wickets]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>win_by_wickets</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_of_match</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_of_match]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>player_of_match</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>venue</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[venue]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>venue</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>umpire1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[umpire1]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>umpire1</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>umpire2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[umpire2]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>umpire2</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>umpire3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[umpire3]</local-name>
+            <parent-name>[matches.csv]</parent-name>
+            <remote-alias>umpire3</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[batsman_runs]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[batting_team]' role='dimension' type='nominal' />
+      <column datatype='string' name='[bowling_team]' role='dimension' type='nominal' />
+      <column datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[match_id]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[toss_winner]' role='dimension' type='nominal' />
+      <column aggregation='CountD' datatype='string' name='[winner]' role='dimension' type='nominal' />
+      <column-instance column='[toss_winner]' derivation='Count' name='[cnt:toss_winner:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[winner]' derivation='Count' name='[cnt:winner:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[batting_team]' derivation='None' name='[none:batting_team:nk]' pivot='key' type='nominal' />
+      <column-instance column='[bowling_team]' derivation='None' name='[none:bowling_team:nk]' pivot='key' type='nominal' />
+      <column-instance column='[toss_winner]' derivation='None' name='[none:toss_winner:nk]' pivot='key' type='nominal' />
+      <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.51928' measure-ordering='alphabetic' measure-percentage='0.48072' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:batting_team:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Pune Warriors&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Chennai Super Kings&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Kings XI Punjab&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Royal Challengers Bangalore&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Rajasthan Royals&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Kochi Tuskers Kerala&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Deccan Chargers&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Kolkata Knight Riders&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Sunrisers Hyderabad&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Rising Pune Supergiant&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Mumbai Indians&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Delhi Daredevils&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Rising Pune Supergiants&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Gujarat Lions&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[cnt:toss_winner:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:toss_winner:nk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[cnt:winner:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:winner:nk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:toss_winner:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Rajasthan Royals&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Chennai Super Kings&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Kochi Tuskers Kerala&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Rising Pune Supergiants&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Royal Challengers Bangalore&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Kolkata Knight Riders&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Deccan Chargers&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Mumbai Indians&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Sunrisers Hyderabad&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Pune Warriors&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Delhi Daredevils&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Gujarat Lions&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Kings XI Punjab&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:winner:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Mumbai Indians&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Gujarat Lions&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Rising Pune Supergiants&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Pune Warriors&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Kings XI Punjab&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Chennai Super Kings&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Kochi Tuskers Kerala&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Royal Challengers Bangalore&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Sunrisers Hyderabad&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Rajasthan Royals&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Kolkata Knight Riders&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Deccan Chargers&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Rising Pune Supergiant&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Delhi Daredevils&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:bowling_team:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Rajasthan Royals&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Chennai Super Kings&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Kings XI Punjab&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Sunrisers Hyderabad&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Rising Pune Supergiant&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Kolkata Knight Riders&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Deccan Chargers&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Mumbai Indians&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Kochi Tuskers Kerala&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Rising Pune Supergiants&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Pune Warriors&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Delhi Daredevils&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Royal Challengers Bangalore&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Gujarat Lions&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A836CC13-9CA1-460E-A601-F2E8EC2F8B07}' />
+    </worksheet>
+    <worksheet name='Team win'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='deliveries+' name='federated.0izj4vp1h3sp5b1co4m351y8pmc7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0izj4vp1h3sp5b1co4m351y8pmc7'>
+            <column datatype='string' name='[batsman]' role='dimension' type='nominal' />
+            <column aggregation='Sum' datatype='integer' name='[batsman_runs]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[bowling_team]' role='dimension' type='nominal' />
+            <column-instance column='[batsman_runs]' derivation='Count' name='[cnt:batsman_runs:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[batsman]' derivation='None' name='[none:batsman:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bowling_team]' derivation='None' name='[none:bowling_team:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:batsman:nk]'>
+            <groupfilter function='member' level='[none:batsman:nk]' member='&quot;RG Sharma&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:batsman:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='1222' />
+            <format attr='height' value='766' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:bowling_team:nk]' />
+              <wedge-size column='[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[cnt:batsman_runs:qk]' />
+              <size column='[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[cnt:batsman_runs:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F2F5C1BD-EF75-45F1-8210-696F422B4BF3}' />
+    </worksheet>
+    <worksheet name='toss win vs. win'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='deliveries+' name='federated.0izj4vp1h3sp5b1co4m351y8pmc7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0izj4vp1h3sp5b1co4m351y8pmc7'>
+            <column-instance column='[team1]' derivation='None' name='[none:team1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[team2]' derivation='None' name='[none:team2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[toss_winner]' derivation='None' name='[none:toss_winner:nk]' pivot='key' type='nominal' />
+            <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[team1]' role='dimension' type='nominal' />
+            <column datatype='string' name='[team2]' role='dimension' type='nominal' />
+            <column datatype='string' name='[toss_winner]' role='dimension' type='nominal' />
+            <column aggregation='CountD' datatype='string' name='[winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:team1:nk] / [federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:team2:nk])</rows>
+        <cols>([federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:toss_winner:nk] / [federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:winner:nk])</cols>
+      </table>
+      <simple-id uuid='{0280E5E4-0083-46F6-A22C-D7BF99FE4577}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Team win'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:batsman:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:batsman:nk]</field>
+            <field>[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:batsman_runs:ok]</field>
+            <field>[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:bowling_team:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E0D1B4BE-1CE8-4007-8F2B-D0E37F866E42}' />
+    </window>
+    <window class='worksheet' name='toss win vs. win'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:team1:nk]</field>
+            <field>[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:team2:nk]</field>
+            <field>[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:toss_winner:nk]</field>
+            <field>[federated.0izj4vp1h3sp5b1co4m351y8pmc7].[none:winner:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E9164B2E-A213-499E-B82C-18E2E3263A91}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D2856B9F-E8D4-4558-85E7-7184DF34E133}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Team win' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAXmklEQVR4nO3daXAc6X3f8W/33DMAZoDBfRAHiWNJ8Fhyyd3lLlfSrta2bFUSO5Iq8Qtb
+      FTtx9CKVvEpVSnYqdqVcpXJSeeGUXXnjuBxZUcWxSo5SsiIr0nKzK+1Se/AEiZsY3MDcOObu
+      Jy+GIAHiGgAzAAb9/7wj0dPTAzy/efo5W1NKKYQwKf2oL0CIoyQBEKYmARCmJgEQpiYBEKYm
+      ARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQ
+      piYBEKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYm
+      ARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQ
+      piYBEKYmARCmJgEQpiYBEKZmPeoLECePUgqAVDLJwvwc4WCI5eUlkskk6XSKdDJFLGsjZm/B
+      7bThcthw2CxUuOw01FTQUleJv8qFrmlomlbSa5UAiKJQySRDIyOMjAwzGZjIF/ql+LbHx/Vq
+      Jh3pbX9ut1poqq2gvcHHuc46+jvqaamrLHogNLUWVyH2QikIBWF0FOZmUOEwfzI8zHQiWdDL
+      8wHoK/jtNMBX6aS/s57r/W1c6m7E7bDt8+LXnVcCIAqmFMTjMD6aL/jxWP7/nvj+7CzvBUMF
+      nWqvAXie22njal8zb7/UxQvtdVgt+2vOSgDE7gwDZmfg3l2Ym83/ewsD8TjfnAgUdMqDBmC9
+      Op+bv/daL2+/1IVrj7WCBEBszzBgegru3ob5+V0Pj2cy/IfBIbIFFKliBmBNTaWLX3m1m7df
+      6sJb4SzoNRIAsbV4HG59AIGJgl9iKMV/HhlhLpna/fQlCMAaj9PGlz93ji+8fAanfed+HgmA
+      2CibhQf34e4dyGzfS7Od705Pcysc2fW4UgZgTUejj9/8pYu82N24be+RBEDkKZW/z//gpxCN
+      7vs0n0ai/NXU1K7HHUYAADQNXutv47d+5TI1Va5NP5dxAJG/17/zKdy5vW0Dt1AdHneRLqo4
+      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
+      4rlHKpWSBOCEq6o9y6U3v4GmPxvyMXQL02deyhf+I2zwbsftKu2I8HoSgBNO0zTq2z/Lude+
+      Dpr+pPBfYamm6VgWfjjchrCMBJuApmm09v0ayWSYH8d/zrKv4dgWfsgPiO1lq5SDkBrAJDRN
+      48yl3+Zc71fQtOP9Z7fo+qENiB3v34QoKk3TeK3hLT7b/Evox/xPfxgT42o9dcf8tyCKTtM0
+      Lte+yi+2/SpW7fjeAZd6anSLt5Xf/YV/L20AszpbfRGXxc0PJr/Dau5oHlC3E7fbfaCtUnZy
+      tqGff/mZf02ls0oWxZtdLB3hbwN/zfRq4KgvZQOlFA8eDm7ajOsgdE3n75//Er96/itYLfnv
+      fgmAIGdk+dnCTW4tvIs6lNn4hRmfCBCORItyrlpPHf/s+r/gXON5tHU9YBIAAeS/cSeXx/nR
+      9PeIpHdfN3AYFhaDTE4XtsntdnRN5+qpV/mNq79Ftbtm088lAGKDjJHho8X3+WjxfdLG/ndq
+      K4bllVUGh0f2/fpT1R38o8u/wcXmFzd8668nARBbiqSCvDPzfxhbGjyya8jlcty9P7Dn5yG7
+      bW7+wYUv8/meL+C07TyeIAEQ2zJUjvGlEW4tvMvM6uShv79SisGRUVZWtn6G2POq3TV8vucL
+      fPbM56l2Vxf0GgmA2JWhDCaWRri1+B4zKwEMtn5YXikEpqZZDO7cJqn11PGLfV/kzZ63cdn2
+      NoAmARAFU0oRTYd5FL3Hg8inxNLF2cx2J6FwhMeBzbWP0+bi5fbrXO+4QW/9WezW/a0hkACI
+      fVFKMZeYZij6gInlUYLJ+ZJ0oSZTKR48zLdDvE4fLzT2c6X1Gpdar+CxH3zdgARAFEUiu8LU
+      SoCp5XFmE1PEUpEDjTDbdDtVNh9+Rx2utJe++nO0eFu37c3ZLwmAKDqlFApFKpckkgoSTUdY
+      ySyRNlJkjAxpI0U6l8Kq27DpNhwWJzbdjsPixGurpsZZS4WtCh296AX+eRIAYWoyG1SYmgRA
+      mJoEQJiaBECYmgRAmJoEQJiaBECYmgRAmJoEQJiaBECYmgRAmJoEQJiaBECYmgRAmJoEQJia
+      BECYmgRAmJoEQJiaBECYmgRAmJoEQJiaBECYmgRAmJoEQJiaBECYmgRAmJoEQJiaBECYmgRA
+      mJoEQJiaBECYmgRAmJoEQJiaBECYmgRAmJoEQJiaBECYmgRAmJoEQJiaBECYmgRAmNr/B1tF
+      1/k4Hab+AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='toss win vs. win' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAgAElEQVR4nO29Z5Mk13mo+aTPrCxv2ruZ7h6DAUCIhEiJ5N2Q4eVdhXY3QhuxX/bX6Ods
+      hGL3xt644tWuJEqXK9GAJEiYwXRPe1Nd3ldlpc/90EATTYwFK2cwmHw+AdVVJ0/mnDfP+57X
+      CVEURSQkvKaIL3sCCQkvk0QAEl5rEgFI+NpyfnJC8JTvyC9kJgkJL5yQn/zTP/DOn/+A448/
+      QUxlwWqzeOsbVHd/y9qdb/Hm7RvJDpDwdUVkaWmJUsHEEwxca8jK+ho7D3ZYX1vlwYMHAAjJ
+      KVDC1xXPntAZOai4iHqWcDrAlwwk38IXVepnR6+WAEwmE0zTfNnTSPga8UrZAEHwNJPm60P9
+      9IDT5oC0aXLr7u1n+ofqVPdxUytkGPDhzhE3tu+yWM499Xe7u7so+EymIdvvvIX+h0//leGV
+      EoDXh5D3PnjA//w//TX/73/5P+k2j8lWbtBt1Shks5w1OphmmnDawfZlvvXOHT78zcfc3FxB
+      kHx61Yd4Uo6sYvP+/SbOqIM17OIGCjfW57m4aJHJpmgNp/zln/0Fv/rZv5BbvMNaRuPDX/wU
+      L3Qxs0u0aufIuoowtVi5dY+t9eWX/WBmTmIEf1UJfBzHIRQ1tteK/OoXv+Bi4CLjIJtlxv02
+      lhsihy4ff/KAXn2faqPPyPZZv/UNtksC//CvP6fT6VGrNxg7AWZk82/v/QpJUxh0OrzxzrfR
+      ZDCzBXx7TK/dodPpc+PGEg8+fB+9tM6g3SKdNjg+OX3ZTyQWXikbYDgcks1mX/Y0XgiTQYe9
+      kzpz5SLFnM7IlakdP2RhZY1QUIi8KXD5BhPwaXf6VOYXUFJ5FH/I7sEJW7fucHq0j5kr8vP/
+      /o+88yd/ztpcht3Dc5YX58kUy6RUmVqthiqGjG3QNIlc3qTbHfP+ez/FV7O8dWMRJTfH+tLc
+      y30oMZAIwGtBhG076Pqza/dRFNLv9TGzOVRZinFuL5dXTgUKA4/D/T16vQFT13/u3zcvztg/
+      PCYIv5zc189PODg6vfb7wXDIeDwGYDoZ4z9m6PF4zHDQZzgaE36Ja4/HYzx7wnjqXn4QBgxG
+      I8YT6ym/FNB1nfGgQ388xZ2Oqbe6T/6FIFIoFq8Wf7N2xsP9Q7zg+Z+bPe7z4MEuw4l97V6e
+      5dV7tL/DabX+xO8OB8PH/i2KQk4O92l2+o/8+ytnBJ8cHjC3ehNGbT7+5JjFhUUCa0ikmkT2
+      gIkvMZfVaXcHrG3dIa1fv8X+cMrG+iIHRycooYNs5gmmA7R0gVGvTXF+gW69TrayyEI5/4Xr
+      D8cOa8tljk6rCO4YLVtiPOzhjofIRo65QpacmX7k3M9P90HJkc+msMcDur0e8yvr1M5OSeXy
+      uMM+hcVVKoVH73KNRh3XcVhZXuT+YY2lpSUanR6qJDJOmQTOmGkos7mxivCI33f6IzyvjyYL
+      DKYOQugCAoFr0e4OURWJhY075FNfXBb9ocXqYp77v9nhzrvbDBpN2vUuqUIRTXCZeAJbN9cf
+      ed3hoMfcyhoX1TNGusQ0VMgaKpFvc1pts7hQpN4asL29iSJdfyc7oYhq9el1ZWr1BqVSETNb
+      ZDoeMuq30bMVJv0u2dyjn1k47dIaR7yxqFNvNBABz7MZDMcsLy28ejtAEEYosowoSqzd2MIb
+      Nji5aGJPbQRZw9QVbM9nc6XEYProHUJWNXC6HF30sa0+bmiQNwT03BwZJcTyQqoXtcfOQdY0
+      QqvFSX2EbV++1bKFMgVdodcfPDb+ZGpNEASR/mDAxPHY2l7l/OOHzG/dZToZIckSU2v62Ov6
+      novrh7QbLW7e2qRVbwJwfviQSDEYDodcnF/w+JelgCiAEwqokkC/36fb6+EGUNQMVm4uMBjY
+      j/ylPRlwWhuSNwTc0Kff72Fm5xACm5PjExzbfvx1Q5/f/vLnmPkSw+GEi2qVfr/PcDBk2mvS
+      m/oQ+jjeF59cp3ZCvefQ63TZ3lpjMJpyun8fNwgYWx4X1epj7xZA1ItsLed4uH9Iv9+n3+1h
+      +xFrSyUGnS7S3/7t3/7tE0f4CuE4DnOVEgf7ByhGGtM00XQdXRbQUhny2TS6YWDoOppuIAoC
+      rufiOB6apl6OYQ2ptXrc2H4DyZ+gZ8uo2Jfu8nEXZB3XcSiWShAGOI6DpmlXc5iO+zS7I25s
+      30XwRpjZAtl0CjOVQjcMNMPASBlMh0PC0MNDRpEu34spM0tKk1B0k0zaRNd19FSK06N9vABS
+      ioyRyZHWFYaTKY59/dqyorI0VyCUFGrnFyyvraFrKovLq0S+DaGPkcmhySK+7yJKKqL4u3ey
+      IAgU0gaCliad0ok8Bx+FSrmIYRhoKQOZCDcIcGz72rUVVWd1dYWUqXByXKVQLJMxTQxDx0xp
+      oOiU8lmGw+EXnhmixNrNLTxrjBCFGOksYeCTy6bxI5F8Lottu+TSBl4Q4Lo+qqoAlydU83kT
+      I53m7KzO2sYG3XaHGzfWGA2H5Isl8rksRsp45LUjz+a4WqdcmUMOHdxIolIuYegGsqr9zgge
+      jUZ81e1hy7JIpVIvexqzJQo4PjphcXUDTXnlNuQvRRT5dDojyuXCc/829B0GY5dCPjOTuXzh
+      FKjXrmMFEilVoVD4og78KLrdLoVCEeERCqA16tPqT1hdWUZ8lIL4GALfpdZos7i4iPTpD592
+      ChQEAf1+/+o7iqI8+wWBdrtNqVRiOp1+/QQt4ZFcs3acYZ2f/maf73/nLv/wX/6em/feZmM+
+      x1Gtx3zRpNvtUVlYoHHRIlOeQ7T7WGiMOk2++73vPfICpxd1VpcW2N07pGBK+FIKQ/CwAhkl
+      mhIpJs6oSyo/jzfpMg0kNjfWeLj7kOW1jU93pWeTnOPjY05PT7l79y47Ozu88cYbtNttisUi
+      CwsLT/xtGIb84he/4N133+XBgweUSiWWlpaoVqu8+eabiOLr8XZ+3bj2r2pPBqRzFXLZDEa6
+      QOPsmH/5139h0Kzx/v0HFDIqv/7N+1iCzsMPP6TWaPLrX/2aXq/3+CsIIql0DllwOdg/otvp
+      0B6MWZ7PMrQiKnmTieVwcnKM44Zogk8QAaJMJpNGlp594R0cHNBut7Ftmzt37vDw4UOCIGBu
+      7ukOnEajge/7PHz4kGKxiO/77O3tce/ePYRHbW0JXwuuGcGamad1tsfADsiYKXK5DCvzFSI1
+      TalUYL5cBEGhWKqQUiVczyGbLzE/V2ZhYeGRKpBjDbmoNagsriLhY6TzGHLIYBoiBRaWF+La
+      Dql0mnwui6ar6CkTKXQ4Pq+jawph4OMGAlHgXzeuPkcYhsiyzB//8R/TbDa5uLhgfX2d4XCI
+      KIpkMk/WGXu9Hu+++y5RFGHbNkEQsLS0xPHxMfPz84kQfE2JzRMchiFh+GXcPY9nPB6TTj/6
+      jD0h4csQmyMsDENc1yXwPVw/QNf0qx0iCAIEQUAURaIwJERAJGTquOiafu3o7vN4nofruo+9
+      ZhRFeJ6HLF/e1ovU2z8T+M/uK9kxXg2uCYA9bPKvP/uQG9u32Vpf+vTTiCAIURTlanGFYYgo
+      So9dqJ/n4GAPXU/ho1IwJUI5Ra9dR5JEJEllrpzDQUccHHM40lHxWJnLM5gGlHNpxtMp5VLp
+      mW7m4uKCnZ0d3nzzTY6OjnjrrbfodrukUilKzzjGl2V/f59ut8v8/Dy9Xo979+5xfn7O3Nzc
+      U9WvhJfHNQEQRAnPmYIQ8N9+9I+AR+BNKZoqo8hgb/cTbmxuU6v3+Zv/7X9lLvf0o0JBUlld
+      W+focJ/d3QZqOk/W1AiDkFxGpNloI+YWySGwsLSG1TikPxhQrdaYFMtUVtae+WZ2d3fpdrv4
+      vs/KygoffPAB6XSa+fn5534wz8vBwQG2bVMul1ldXeW9995jfn7+sTZLwleDawIQIbK4tMiD
+      +5/gjQaMvJCSKeH6IYoqcevtb7M9r5OZ23ymxQ+gSbC/t0euNI/nTDFyZcTIQ1ZUDF3F90CQ
+      RaRI5+Jkj1I+gz8dkDJTmJk8ubTBaDQCnqzShGHIysoKf/qnf8re3h6j0Yj5+Xk6nQ7dbvep
+      x6B/CL7vc+vWLTKZDK1Wi729PdbW1qhWq5TLZYrFYmzXTvjDuGYER1GE7/tIkkQUhkSCwM//
+      /d/4zne/hyxJV38D4anqTxAEeJ4308kmRnDCrEnyARJea66pQMG0z0eHLZxxHzOl8+Zbb/3B
+      Fzg9OyWtCrhoqKkMSugiqjqyEDCeemRSKpOpRz6XYX9vj5Qmo2oyrlJiufR8FSAajQYfffQR
+      b7/9Nt1ul5s3b2JZFoqifKWrSURRxN/93d/xN3/zN3zwwQdsb2+j6zqj0Yhyufyyp/e15poA
+      hJ7NP//oP/Pn/8v/Tv10h5PjQ4KpzcqtLfqdFkGk0ekN+PMf/ID5wrOpIq41Yq/h8Z07C+wM
+      +kzrfYy0TBQ4uE6AbogEYppCPstC0eC3RwPe3czT+hKJFwcHB8ClTu66Lr/85S8RBIF79+49
+      91gvkvPzcyqVCicnJ0ynUz788ENkWebmzZsve2pfe75gVd68/SYXxwdMbZsQiaVimqOLFouV
+      ItNQZSEjsX/y+Fj530dNZbm9VqHaHiJLEuVKBdPQIfQZji3yhRL9bpswiqh3p9yoGIydEEkU
+      CHyHycRiOJo89TqfOd1WV1c5Pz+n0+mQyWTwPA/LelrG1Mul3W6zublJv9/HcRwANE2j0+m8
+      5Jl9/bluBAc+Y9sj9BwE8TIVThFhPOrx4x//mNt//AOKmk9lcQVDfbIP7WmmxcXZMX3L5+7t
+      rWcMdbsM2U7O1BNmSWxG8GdqyCxJKsMlzJrYYwXqjQaTfotmb3zt88AZ0+pffjaZTIhCjwe/
+      /QXvPzgk/JIJ6/1+n5/97Gf0ej36/UcnQSckfJ7Yk+KtUY9qzePWSpmPPjnD0DUmwxELc0XO
+      Gl1aZhpFDNne2mZtqcJQX+fwcJ+0JmFW1snoz16S4/T0FF3XcV2XnZ0dTNNkPB5z+/ZtFhcX
+      Y7zLhFeV2HcASU2xVslS7wxRNQ3CAElWkCWJxZV1TP2LWVuBZ1NvtfFdB9uxsZ2nO9SiKKLV
+      ajGZTDg7O8MwDARBQJbl584MS3h9iN0G+CxCMgxDfM9D0TRC3wNBRBQlICKKok+9zwGRIBIF
+      Pn4YoUjSp5UGBCRJfKINEEXRp0F64tW1DcPA8zxEUUyEIOGRxKYCSZKEYRgzHdPzvJmPmfB6
+      E5sAfBYP32q3yRkyfUdirnh5hFmr15BlhcrnvJyD4ZDcU8IcBEF4Ypz9ZDJhd3eXzc3NZ8oC
+      +7pwdHSELMtIksTCwkKSv/wcxG4EDzpNjscud28u88HHJ2RzJdzpkChwGU8cNGyOm0Mkb8zC
+      +jbhpEvPFvjm23ef+1oHBwf4vs90OuX+/ftUKhX6/T5bW1ssLS09fYBXkCiKrnKyBUHg4OCA
+      crlMu93mj/7oj5LgwacQvxGspVjI69TqHSqLyzjWpVfXnlr4YUSn12c4HFAsVaiUS/QGQ3r9
+      y7qVQRA8c1OMKIqo1Wr0+33q9To3b95kNBphGAb5/LOVd3kVcV2X8/Nzzs7OkCSJ9fV1arUa
+      KysrqKr6sqf3lSf2aFDHcVBVlel0yrDfozi3SOA7iIJIGAS4joUTypSyBu3+GDnyEDSTYi7D
+      ZHIpLJ8Zvk+KBo2i6Kpw1nA4pNFosLGxQa/XQ9O0r60QeJ53lY7pOA6dTocbN25wenrK0tJS
+      IgRPITYBSPIBEl4FYrMBPjuW7LQuUFIlBG+E5cvMP6LisjUYoORyfP6g8rMjz26vR7FQuDbm
+      43Ach5OTE5aXlxEEIanu9gyEYciDBw+4e/cu/X7/tctei90IHlsOkdWAyMbzIHQDwMGejBhM
+      bDRFwtRSDBt15srzjDtN1HQBER/TNOl0OlcC8DQODw8ZjUbkcjl2dnZYXl6m1+uxsrKSeIIf
+      Q7vdvlIXf/nLX7K0tHT18ngdwrHjPy8TJKLARRBlBELG4yn9wQBJNTDTJitzGexAZv3GBv36
+      MX3L5aJWv9L/n5UoiqhWq3S7XXq9Hnfu3KHVaqHrOpVKJZ57+xpwcHCAoigcHR2xsbGB4zjY
+      ts3a2rMXI3iVid0TPJlMECOPUE4Rei79Tgs5lSVr6gRhiKGITN2QZqvF6uoKF+dVMvkCqiKR
+      zWQYjkYIgAT4okj2CZ7gfr9PLpej2WxSq9XY3t6m1WqRTqcTIXgMl4WNC3S7XS4uLlhYWCAI
+      AlzXfS2E4JWqDJfkAyTMmthsAFEUEUWRQbdJvT1g48ZNNOVxkZ0Ro9EYVQxx0BFC95ELXZKk
+      q6pvj8L3fer1OuVyGUEQkpo8L4B6vU4+n8dxHHK5pzfl/qoRuxFca/fZvrHGzoPfsnDzbYJp
+      n0GnSaSmqWQ16u0R27e3qNfraKqMFwqEvs+w18KJNG4+R3Pmg4MDms0msixz//59bt26Rbvd
+      Zn5+/mvrCX7ZHB4eks/nGQwGANy+fZvd3V3efffdVyIAMXYjOHSn7B0cs1DKMZz6dLs9FD2F
+      IkYcH50Q+jaOG5GSBCaBgOiPENU049GE6sWT+z99niiKOD4+ptVqMR6Pefvttzk5OUFV1eQE
+      KCYsy6LRaHB8fEwmk2Fra4uf/OQnfPvb337iTv1VInZPcLvdplwuE/lTPtk9Jp0rkEtrRAiE
+      rkW7P+Hm5jaSP+S045IKJ6Tmlmme7OOgsjxfRhZANbNY48d7gsMwpF6vMzc3x8nJCc1mk83N
+      Ter1OpVKJRGCGOh0OqRSKfr9PpPJhG63y927d/nkk0/45je/+UrsALEawc8ax/OsJJ7ghFkT
+      a3l0z/OwrTG94YS5+TmkT0OZbdt+bNdy13UfG7/i+/4TwyvCMGQ0Gl3FDr0q2/DrShRFDAYD
+      MpkMYRi+lB0j9hVyWr1gca7M8UkVXfRQzAIyAc5kSHfiUc7qtIY20/YFxvwqTreBka9Qzuo0
+      uiM21teumuQ99Vqnp5ycnHDnzh329va4e/cu3W6XXC73TG2SEl4sFxcXPHjwgG9961t8+OGH
+      3L17l/F4jGEYL0xljd0IjnyXnZ09iuUC47HFyckJ3W6X0XhM6+yEztjCd11SmQIrywtoqQxy
+      4DEYj+m3L+hbj252/SgODg7odDo4jsPW1hYPHz7EcZzYewMkfDn29/exLIvBYMDNmzc5Ojpi
+      PB6/0JdV7AKQK1Z45+17WOMRUSSQzaRBEIiiCDObwVA1As+nUMxQPW+QzWUx0yZEIUYqgxjY
+      TGyb8eTxHdThUv3Z3Nzkr//6r7Esi6OjI1ZWVnBdl1arFfdtJnwJ1tbW+Ku/+qurnIb5+Xmi
+      KKJer7+wOcQaDu37X3x7e45FZ2izUHn+qMPECE6YNbEfg4ZhQBBcdnB8XD5vFIYgighc9icQ
+      RemR+b9PK4/++coQQNKn62tOEASXfeai6EvnQcduBO8+uI+iaoh6lqwaIhkFNBkkARzHpj9x
+      EUdDCnduMame0Bm7FAyVju2xurxG1nz2cIZqtcrHH3/MO++8w+HhIe+88w6dTgfDMJIy418z
+      oijiRz/6Ed/5znc4PDykUqmwurrKwcEBt2/ffmaBiN8IjiIGgxEZA5p9n0b1hGq1ylm1xnDQ
+      5/ThDpNPY+b6Y5vbt7bJpXVSmQKt+vlzXWtnZ4fRaHTVI+zXv/41rVYrCaD7GmJZFp7n8ckn
+      n6AoCpZl8bOf/ey5I1hjF4BUJs+drQ0sB0K7RyRpVHI6nqjhOA6mmUJVNURgoVzg/icPGFg+
+      2UwaI2UwHA4ZDodPvU4YhiwuLvLDH/6QZrPJ0dERlUqF6XRKt9uN+zYTXjC1Wo0f/vCHlMtl
+      wjCk1+uxtLTEzs7OUyuTf57YbIAoih47kdr5KYX5ZfTHRoc+miQcOmHWJOXRE15rYjeCz472
+      mboBS6sbGIZKFPh4rguijCKL+J6P7fmoIsiacdmcQ9GQCAlC0LRnL+vRbre5f/8+9+7dYzQa
+      sbq6im3byLL82NCLhNeb2AXANFMMrB79ixOclS1653tMxwFKSid0LBaWV2n3B/SbF9y4dZv7
+      73+Ali9jygEb23d5npyWo6MjJEnC8zwGgwHNZpMwDLlz504iAAmPJHYBCMMIRQyxvZDW4T6a
+      JFAolQGfyDAo5tJ0hxNKhTztTo98oUhleYnQc8joCuOJRRSGZDJPdoCFYYjruhQKBarVKpPJ
+      hEKhcK3vVkLC73NlA8w6fzcIgpkvvM8qvyUkzIqrHcCyrOc6PnoZPOlkKSHhy3AlAOl0Gt/q
+      8n//P/9GqTzH//Af/mQmToJhp8FZo0s5Y6LPr5BTn2HU0Gc89Uib13sBRFGUHIMmzJRrNkDk
+      u6QKi6T9Jv/1v/49FyeHbN55C0HVyIgurpylpHn800/e4+076/iShlHa4nvvPL6CWK3V4427
+      d5k0jnjwcJe8JnF2fIxRWCQlWriCTt6QsMcjFrbe4qNf/TsrG5sgprl1M2mGkRAvX3gdd1s1
+      6qMABY9vfPt7mIJPvlDEdV3yhTx7+8csldLYHmzd2mT6lDDllCZxfHbGZOpzY+s2cmRjZEus
+      Ls+TK85RLuRQdJPtjQVqtRaVpWXsyehS1YlCprbNdGrH9gASXm+uN8oOA3r9PikziyoL9Acj
+      cvkco8GQTDbNaDRBU2X8IEJVZGTl8r819fGpbFEUMRmP0XQDSb7sA+a5LkgKiiQQISAQIQoQ
+      RgJT20ZXVRBEZEnA8y/zihVFeWo0aELC8xKrJ3jW5dETT3DCrPk9P0BE9fgAW9AxFJmlpYU/
+      aPAoiqhfnDEcWcwtrZHPXOr0rVYTSZIpFosEro2LjDDtsFcdUK6UWXxMskxyCpQwa64JgNU7
+      5+PjPn/2p3f4v/6P/8zy1m1urVV4cHjBykKBRm9A0UzR7vZYX9/g9OycpbkCRxdDKmUNxDRv
+      37vF59NQRpbD9q1bHB4e0Dyf4okGmhQRBR71WpVKuUSol0hZQ+bWbjGpH9AMLC4aPUq5NK6g
+      sLm+8oIfS8LrwjUjOPAcFM1AVVUyxQrDboPz6jmNvT0+OXjIytY9Do7PULwhP/7JTxGFiLP9
+      HQrrt5EDn3a7w6Ne0J5jEUQirVYX/dPYBtVIs7Yyh23ZeMGlEy4IPBz/snrcZNDG9iXW11aS
+      N39CbPyeDRBy/7fvI5oFpDACAoTAodkaU1ous7q2yf6H7/HhR5/wvb/4AbWLBkulNJmlW4wu
+      HtIa+bz7zbcRhc+VRx/2aPUt1laXGfVaOJFCJqUhCMJlMJwfgKQihQ4n1Qara+vYoy5TH7Lp
+      NLqhMxmPLycrCIkNkDBTntsIrp8dMQoUtjZWeFLG7dPaGX0ZknyAhFkTe1L8YDgkYyj0h1PU
+      VJq08ejw5iiK6Ha7mJqME0SIaorM7303OQZNmDWxR4O2m3VOLYfbmyu0phMOH+xgFgvI4ZTu
+      0KVSTjP1RLZvrOJZA+6f29xZydJx5S8IQELCrIk9J1gQRWQRfNdiNLXJFhaRogAvFDBVCUVR
+      scYTQi4jUgUiEnM34UUR+w5QqcyTTun0e10W8hmkUAB0mhcnnDX6VBZKpLMZhAiMbIl7FRnH
+      DymqGoHvYDsBQRiRzSTGb8LsibUy3JPKo4+HfQJBIfccCzupDJcwa2JtlO37PtPpFF1TmFgu
+      6fTvklk0TcPxL49LJ5MJKUPlYP+QUNLYurGO+IiK0I8rt5iQ8GWJXQVqtlpE7pTy0gq7OzuU
+      F1eYdGtoms5Zo8vi4hK6ImKaJot5haG+Sq/XQZVFVDOPJsffyjjh9SX21RW4U3pjm36twfL2
+      LXq1PTwpT7mQZXFlHd+d0u1dL1zV6/WYDPu4fmIOJ8RL7DtAoTzPxrpOq9vnfO8hlYVtJr06
+      nXGWtJEhVLIEn6o1SiqHKQuIKY1Of0K6YDOZChBJmKmk5WnC7HlpRvCXITGCE2ZNbDuAJElX
+      NXpkWcJ1/asiV67rXsYCPWdPKFmWH9s/LCHhyxC7CnReraJGHkZpkfPTY+aW17k4P0ZVVQr5
+      AqE7ZehCp3ZMeekGGg6hnGZpPmlrlBA/8RvBzoRqZ4zdblBcWad6dgpAs3pEf+IzGA45ODzE
+      zJVYX15g+On/JyS8CGLfATKFCqvLKo3OgPODfUpzi0T+lHz+DWx7ShAGZDMZKjmT42qdMAzJ
+      ZC/1/M/KoicBcAlxEWuj7FkPnYRDJ8yaWBtlz7o8uud5SZ3PhJkSuwp08PBjZHMe0e0wclVu
+      rK0AAYHnMLY9oiBAdh2Gisz6whLt2jnZ0gLWZEi5VGJvf5/tra24p5nwmhK7AMh6htAdEwkS
+      quhQPW8DE6IwwvEc5nIGvalEsZTl6HAfx5py0RmRSamUkwbXCTETuwAoiooo2kRqHnFq0e80
+      QdWoFPOovo5pykyDkEb1nLxpMJkG6OrvzvtVVWU0GiEBwZdshZmQ8DiSwlgJrzWx7QCyLCPL
+      sx3e8zwMIymYmzA7YleB9h8+wPND0vkySwtzRGFAGPiEiKiyiO36pAyNo+NjTFXAClPgWywu
+      zIMoP7HuaELCH0rsAuC6LqKk4HTPOFWzON0z7PEAQTURnSFn9S7f/8H/SOD5WIJKFA4JAonD
+      3Y8573n8xz/7btxTTHiNiV0AJNXg9q1b+OMGv9jZx1BFSqUKEQKuGLC5XcKQRRZzKh83fYpB
+      B2P1Hv12nZRxWRFaFkA1E29wwuyJvS7QLEnqAiXMmth2gDgaZTuOg2VZMx0z4fUmdhVob/c+
+      ERJ6pkhGA8XI4doTDE1h4gTkTJXeyGbSbaIX57D7HbKlOTKGTH/kUKkUn1iCMSHhD+GF9An2
+      fI+8rlKvHjN0LijlTAxV5OCoysLKAiEqShBhZkwGzTr9Vgs3rXJ4cIRqfo98KvZpJrymxL6y
+      tFSGxYzOwLFwXNB1FQQBa2qTSadIZ3LUz2ssLRRptfpkc3kkYGQNyWQyeLbFRFSJgijZCRJm
+      zgv3BHuORbXRZ2Nt6bnHTHKCE2ZNcgqU8FoTuwp0uLeD4wVkSwvMl7IIgoTwqdi2x+kAABCK
+      SURBVC5z2UMgonteJXtjHa/T4LTeoZzLIqZzlLImUhIAlxAjsQuA7TiIskoUTvnwgzMkTcNQ
+      JRRRRJYC3v9gn3u3t0kD9XaPN964i9Nr8OD8jK6uc2fr8U24ExL+UGJ/vYqqQSFtEIaXfYij
+      CAppFSuUGQzGLJWzuJ+WD8qndR7s7NIf2SyvbaDLAqPRiNFoFPc0E15TYrcBPj98FEUgCNRO
+      DsnMr5LRZCIue38hCAiftlUSHqH2CIKQ2AAJM+dKAEaj0UyT2MMwnHk+gG3b6Lo+0zETXm+u
+      7QDBtM/f//NPKVUW+NPvfBMR6J/vcDYMkVIV3tio8PFHH/HmW2/wjz/6b6hmnu9877voj6jg
+      fNUlctDlrN6ilM2glxfIKM+gdYU+E9vHTF1f7E9LiBmPx+zu7rK1tYUgCMlukfBUrhnBoWej
+      pCsokxr/9M8/pn1xxubGEuNQpdY942RfR4483nzrLnYo8s2VFD/91UeMq/epLKzz251Dbq8v
+      UGvU+eb3/xPrlTQXjTa3b93Gap7wcH+fvKHQbjTQMiXkYIwr6OQMkeloxMLNuxzsfMjcwjKh
+      YHAj9Xxv+6OjI+Byp9jZ2SGfzzMajdjc3GRxcXF2Ty3ha8MXXsfWeEBn7DPpt9i4fY+Menlm
+      uXrzNr49xLZtABzb4uCsiTCqIebL9OoNlm6+iRJMWNq4Rd68rOasKwLNThfbDVi7sYXoT/BR
+      KOazpHNFClkTSdHZXK1Qa7Qxs1mG/f5l/+AoxPOeLbUyiiKazSbD4ZBarcbCwgKO46BpWuI8
+      S3gs11SgKPA5PTujUFnAVEXOL5rMzxUJQkBSCL3LmjyZTJp69QzJyFHK6tTbPXKpFKGkYmoi
+      5xd1ynMLEPpEUUi30yGdySIpKlHgY1tjBMVAU6SriUgiBNGloZs2UwiCjKqI2I4HROi6/kQV
+      KIqiqwVvWRbdbpfFxUVGoxGKoiRCkPBIYjsFiqIoqQyX8JXnEY6wiFa7Q6VcvvZpq9lAkmUy
+      2QLKM7QtEgQBQRBo1M7o9kcsr22SNZ+9ycWw26Ta6rO5uYkqS1djiolnOGGGXDeCA5df/fI9
+      9s46fPveDSahiqnJSGJEo1HHnlqs3bxFs9XhnXf+CEOVHjfuFb3RlDt37rK3t0dbCPEEHU1w
+      EPQs3qhHKl/BHnUQ9CzusI0bKdy7d5dqo8Odu3eTCNCEWLn2Ou2c3ic0V8goAf/fT39Fu93m
+      +OiQvf0jxoM+YQTOdMKg18f2nr37S+g7hMDx8QlhGDL1Ipbn8viCTjGr0O2NOT8/R0tlKWR0
+      wgiiIMDzPIIwnPU9JyRccc0G8J0xP3vvN6ipLIo/RjDLLJoCdVfGCCwEScIwUpycnPLGN79N
+      8RlUmmG3RaM75saNdfrtGi46WQ2GToQhBXgoTEd90vkShqogCBGaYeI7E06rTRbny4iiSCiq
+      BO40OdtPmCmx9gibdU/fJB8gYdbE2ig7CALGkzEpXWU0spB1E1N/dKGrKIoYDocYqoTjR4iq
+      jqld/24YhjNvvJfwehN7OHS71cKzbVZXlxg4U0739kgVCiiRTW/kUi6aTBy4ub6MNehwMvLY
+      XEzTc4UvCEBCwqyJXQCi0MfxfIRgytASMLNzEFg4YYQhiwiihGNPCAFJEgnCECE5+0l4QcQu
+      AKVPG2V3O13KmTRSKAAqvXad02aXe6UcqqYhRCDpWe7eKOAEETlVJfBdbDe47BuWTqpCJ8ye
+      WHuEPUlf73ea+KJOufDspzqJJzhh1sSeEGPbNpqmMp06pFK/K20eBT5uCJoiM7EmpHSV46NT
+      QknhxtoqovhFNShJiEmYNbGrQLV6HdG3yS+ssrvzgLnldcadGoqicNbosry8iiZDykhR0FwG
+      xjL9fg9VFlBSObRnCLtISPiyxC4AgWPRHjlIQo3Fm9vU9j6A1DI38xq2mMKeDhm5LqVS6aqp
+      RrvRJK1LpNUsWlIULiFGYl9e+fIc6+s6zXaf071dKvObjLs1uqMCWTNDqHLlMFOMLClVJNIU
+      Wr0xmcKUSSRAJGOmnj2QLiHhWYnVCA5nHMeTGMEJsyb2RtlBECCKIkEQIn8a1vzZ6ZAkPT2a
+      9PPEUXI94fUmdhXovFpFFwPkzByTXpPK0irnp0eoqkaxUCB0p4x9gW79jPzcCrrgEalp5oq5
+      uKeWkBB/YazAtThrjQgGTdKVBc5OTgBo147pjV0GwyH7BwfoZpbVxTmGwwEHBwdxTyshAXgB
+      O4CZKbA4p9DsjRifHpMvVIgCm+zGNlN7QuB5mCmTQlrntNbE83xSqRTAVUW4RO9PiItYw6Fn
+      XRgrCYdOmDWx7QCSJD23kfs0XNdNKsMlzJTYVaCDhx8hpxcQ3Q4jR2NrYwUICXyPqesThSHh
+      eIRjmiwWSwy6LVLZItZ4SLFYZG9/n+2trbinmfCaErsAiGoafzpCEEBmwvFRA4RL3X9iT6nk
+      DGxPJ5UKODg6YNhuE6otsqZCsVhMcoITYiX+RtmSjMKUSMtBNKHbqoGmMV8qoBgGpZxCvRfS
+      bbXIGyqBYqLJIvKn6pMsSQyHQyQgyQVLmDWxFsaaNYknOGHWxLYDBEEQS6NsWU6i4xJmR+yr
+      6eRoH8f1yRTnWSjnv/D3CBAFOD+vYigwjQwEf8rS8jLwafOMhISYeCE9wmRZZdI85FS8h9s7
+      xxp2iZQ0emRxeN7iP/zlf8J1HKJIJQyHBIHA7ke/5mIY8Bff/07cU0x4jYm/R5issXHjJhtr
+      K7QuTrEcn0J5nkIujaTo3HnjLrosMJdWaI59/FEXLV/C9iClK0ysCbY1IXhlmrkmvErE2ijb
+      dV3CMLwsaBtFuJ6HJMn8TquJ8P0ARVGBkMsTz+gyetT3QRARBBAAQZSwrCd3iElIeF5i9QQb
+      hnHtM+Mx331WgsD/wpgJCX8IsQnAZ8Zr9fSI4WRKZXGNcv4yjudRMT2jwYBULke31aZSKX9h
+      vN8fNyFhFsRuBI8sm8X5ObrDAZ3zfWwxRVaXmfTb7J82WZjPMvUVvF6dzPJNxo0zqtU6K0tF
+      Hu4f8413/wRTTRLjE+Ih9pUVhQEnx8ekMwbDkceg18XzPNrdPqE9QjML2P0+2WKZUrlIvjRH
+      OZem2ekghC4TyyEIkpqgCfHwguoCaVjWFGs8RJQlqrUON9fmsb2IlKEymrhUimna3RG5bBoB
+      8H2H8dQjl04RCiJRGOF7blIXKGGmJPkACa81sZZHD8OQduOC7mDEwsoNpMi7OsZ8XMdHa9Dl
+      tN6iVFmkUsw+csyEhFkRuxHcG1ls3ljnuFpHV2Uuzo7IVVbwHIvGxRmWJ7BYztJut8gt3UIe
+      jphf36B1vI/nLkDgsLS8FPc0E15TYjeCQ8/ml7/8NaXKPJZloWsGw+EQy7KQtBRF06A7sthY
+      LDB2fCDg5PCY5ZVlxpMpg8Ew7ikmvMbE7gkejUak0yb9wQhZEhkPuqiZEqp46fEVgak1YPfB
+      DqtvfZeKGiDoBqooUD07QdIzmIaKBPiiSDbxBCfMkK9EZbjAcxlPXXLZJxu4ST5AwqyJzQYQ
+      RRFRFOl3mjQ6A9Zv3MR3plenOJ8/0ZFlGc24LIViTwYcn9VZWl0na15PgJckKckHSJgpsa+m
+      eqfP9o1V9k9OyWdNGhdnmMUFhNCj3bhg4gmszuU5r9WYW71N1O0yt75O9XAPe34VApe5+bm4
+      p5nwmhK/EexO+em//5z5pRV6/T6SJOFMbXr9PpGkktMUat0Bt1dLdCceEHC4v09lvkKvP6HX
+      7cU9xYTXmNg9we1Oh1I+S73VR1FEJoMOillClS8T3kXAccbUTg4xN95lQXUQ01kMCfYf7hEp
+      KebLeSTABQqJJzhhhry0HmGfx54MqbYG3NxYfWJ/yMQTnDBrYj8GnU5GdAcTFhbnkR4TyuzZ
+      DpKuIRLRbjQws3lkVUWRrmtoj/MeJyR8WWI3gs8uaizNVzg+OUcXfeRUHk0RkAUBz3PpjWw0
+      z6GwvUX/5BA5U8IZtNnrjVlaXKacT449E+Ij/nBo3+XBg12KBQPL0xn12vS6XRqdLtZkTPv8
+      FOtTTWnqBpQKOTRNpbKwzGTQiXt6Ca85sQtArljhnW+8hTUNEf0+km5Syuogm0RRhJnLks5k
+      kICVpXke7u4ydiNMXSOdTjMaja7KpCckzJpYw6E/a373+7QadQrleWTp+dIbEyM4YdbEfgwa
+      hSGu56OqyqPzeaOIIIqQxKdvRkmj7IRZE7sRvL/7AFHVKJfnMNIZPHuCNRwQqiYZXWZq24RI
+      +NaAVGEBb9xBMguoeDiBQDGfLPiE+IhdABYX5zk4OSOa2uQ336BbPSbwNVRtSms8ZuvWLY7P
+      a7iTAXOawu7OEel8Dylyuff2O3FPL+E1J3YBmE5tVFlCS5mcHeySMjTy6RwIPinDRFdldF1H
+      iVymdkghl6IwN4ckBMiEjCZToiAkm02OQxNmz5UNYFnWy57LU0kcYQmz5moHUFV1pgPH0dT6
+      SSdLCQlfhisBkGWZ0LX4x3/5CcXSPHfu3sbQFFy7z8d7XbZWCmjpHELoEUYwnYwx0ya/eO99
+      /uS738PQvqhNhWHIwd4OQQipbIlyPkUkKjRq58iyQjabw1AlHFQYnrHT8MmlddYXKzh+hKGr
+      eJ53VQ4xyQdImDXXVtOgeUSquMGoe8Iv/nuVe2/f4rf7NQJXZVB9wMUYxEmDd7//Z+x//Bts
+      KYs97nNZ5f/RhILMrdubHB7u8+vdD4n0PAvlLL7r4rsWsqRCZoFcELB64xZW45BG/Zy9wyor
+      S4ukimVWknqgCTFx7fA9W1mjX9uj0+1jZgx2dg9RZAncIc1xRN7UqSxvsJQRcdUc6ZRJLqVg
+      u4+P+hRCj72He6hGjmw+z9rqMpIkoqXSVMpFBAREQUAQRU6P9ghEmcl4Si5rIGsmi3OlxBuc
+      EBtPdYTVjz6mHZV58+bCcw0chw2QGMEJsyZ2T/AsSTzBCbPmmgoUOGP2jy9wRi32T5szuUCt
+      XmfSb9Ho/k6FOTs7o1avX/teu5NEfia8eK4ZwaEzZu+4ykpphX6zxT8//IhMaZ5B45hATFEp
+      6AhagXfevvvMYaSTQYfTqsfdtXl++/EJppkj9CymrT6W7SM6PT4+6TCXlpisbzNunlCfCPzl
+      978dw+0mJFznkes48G2qBw8R8yvUz4+YeiB4FikzzdnxMf5zlOeUNJONuSy1Vh/DMAk/TZM0
+      DAPP8xhObExdYa4yh65rTN0A9bJH9mVF6elX30GX8OpyzQYIPZtfvf9bFldWUBWTfuuM3MI6
+      gTNBAqLQpT30ePPuNs/aqCUIgsueX0GA6zpoeoooDBAE4bLYbeATRAK6KmO7HkIUIkgKmqpc
+      VZdWFAVIbICE2RNrTvCsy6Mnp0AJsyZWt2oURTQuTlDMCoI3YOIprCx+sf/XuNNFLRX5fDDG
+      Z4u90WwyPzd3Nd4rdGiV8AoQf6NsL2LaawEOvhdxehICU5zpmP54iqnJpPQs406TQq7EqFVH
+      yRSRhQDTNBkOh1cCkJAwa+LvPieIELoIkgpETC2LwXCEZmTI5/OsLhRwQ4ml5SUmnSrjQKTd
+      7lxzon1WaDd59yfMmtjrAjmOgxgFBJJG5HuMBl3UVBZDUwjDEFUWcf2QVrvDysoyjYsLMvki
+      knh5UjSdTgnCACkS8ASS8ugJM+X/B3iwjE3HkObdAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
